@@ -10,7 +10,7 @@ Just another i3-gaps rice
 -   **Terminal:** st
 -   **Shell:** zsh
 -   **Compositor:** picom-ibhagwan-git
--   **Bar:** Polybar +
--   **Music Visualizer:** cava +
+-   **Bar:** Polybar
+-   **Music Visualizer:** cava
 -   **Colorscheme:** Check the xresources file
 -   **Wallpaper:** [Link](https://raw.githubusercontent.com/CT-66/wallpapers/master/092.png)
