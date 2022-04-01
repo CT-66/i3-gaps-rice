@@ -1,0 +1,5 @@
+# vim: filetype=config
+include-file = "~/.config/polybar/colors.ini"
+include-file = "~/.config/polybar/main-bar.ini"
+include-file = "~/.config/polybar/settings.ini"
+include-file = "~/.config/polybar/modules.ini"

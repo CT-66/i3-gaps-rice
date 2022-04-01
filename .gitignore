@@ -1,0 +1,8 @@
+.env
+polybar/scripts/.env
+*.log
+
+__pycache__
+.pyc
+
+Xauthority

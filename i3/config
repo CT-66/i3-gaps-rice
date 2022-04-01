@@ -1,0 +1,194 @@
+# vim: filetype=config
+set $mod Mod4
+
+# font pango:Caskaydia Cove Nerd Font 10
+font pango:JetBrainsMono Nerd Font 10
+
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# ==============================
+
+set $up k
+set $down j
+set $left h
+set $right l
+
+# change focus
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# move focused window
+bindsym $mod+Shift+$left exec i3l move left
+bindsym $mod+Shift+$down exec i3l move down
+bindsym $mod+Shift+$up exec i3l move up
+bindsym $mod+Shift+$right exec i3l move right
+# bindsym $mod+Shift+$left exec move left
+# bindsym $mod+Shift+$down exec move down
+# bindsym $mod+Shift+$up exec move up
+# bindsym $mod+Shift+$right exec move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+shift+minus split vertical
+
+# split in vertical orientation
+bindsym $mod+shift+backslash split horizontal
+
+# toggle split orientation
+bindsym $mod+q split toggle
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+# bindsym $mod+e layout toggle split
+
+# toggle tiling/floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling/floating windows
+bindsym $mod+space focus mode_toggle
+
+# move the currently focused window to the scratchpad
+bindsym $mod+Shift+grave move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+grave scratchpad show
+
+# show all windows in scratchpad
+# for_window [class=.*] bindsym $mod+Ctrl+apostrophe scratchpad show
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# go to first/last workspace
+bindsym $mod+Home workspace $ws1
+bindsym $mod+End workspace $ws10
+bindsym $mod+Shift+Home move container to workspace $ws1
+bindsym $mod+Shift+End move container to workspace $ws10
+
+#navigate workspaces next/previous
+bindsym $mod+x workspace next
+bindsym $mod+z workspace prev
+
+# move containers to next/previous workspace
+bindsym $mod+shift+x move container to workspace next
+bindsym $mod+shift+z move container to workspace prev
+
+# alt-tab functionality but with workspaces
+# bindsym Mod1+Tab workspace back_and_forth
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# create empty workspace
+bindsym $mod+c exec --no-startup-id ~/Dotfiles/i3/scripts/empty-workspace.sh
+
+# resize windows without entering resize mode
+# Resizing by 1
+bindsym $mod+Ctrl+$right resize shrink width 1 px or 1 ppt
+bindsym $mod+Ctrl+$up resize grow height 1 px or 1 ppt
+bindsym $mod+Ctrl+$down resize shrink height 1 px or 1 ppt
+bindsym $mod+Ctrl+$left resize grow width 1 px or 1 ppt
+
+# Resizing by 10
+bindsym $mod+Ctrl+Shift+$right resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+$up resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+$down resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+$left resize grow width 10 px or 10 ppt
+
+focus_follows_mouse no
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+Mod1+r restart
+bindsym $mod+Ctrl+r restart
+
+ # ==================
+
+# gaps
+# for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 2
+# for_window [class=".*"] border pixel 1
+gaps inner 15
+gaps outer 15
+
+# smart_gaps inverse_outer
+
+# increase gaps
+bindsym $mod+p gaps inner current plus 5; gaps outer current plus 5
+
+# decrease gaps
+bindsym $mod+shift+p gaps inner current minus 5; gaps outer current minus 5
+
+ # ==================
+
+# colors
+# class                 border  backgr. text    indicator child_border
+# client.focused          #eceff4 #eceff4 #eceff4 #eceff4
+client.focused          #61AFEF #61AFEF #61AFEF #61AFEF
+client.unfocused        #2e3440 #2e3440 #2e3440 #2e3440
+client.focused_inactive #3b4252 #3b4252 #3b4252 #3b4252
+client.placeholder      #d8dee9 #d8dee9 #d8dee9 #d8dee9
+client.urgent           #bf616a #bf616a #bf616a #bf616a
+
+# client.focused          #e1acff #e1acff #e1acff #e1acff
+
+# =======================
+
+hide_edge_borders both
+
+default_orientation vertical
+popup_during_fullscreen leave_fullscreen
+
+# =======================
+
+exec_always "$HOME/Dotfiles/startup.sh &"
+
+# =======================

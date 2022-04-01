@@ -1,0 +1,63 @@
+// vim: filetype=scss
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  bg: #2E3440;
+  bg-alt: #3B4252;
+  fg: #81A1C1;
+  // fg: #4c566a;
+  // fg-alt: #EBCB8B;
+  // fg-alt: #5e81ac;
+  // fg-alt: #81a1c1;
+  fg-alt: #eceff4;
+
+  background-color: @bg;
+  text-color: @fg;
+}
+
+window {
+  transparency: "real";
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+inputbar {
+  background-color: @bg-alt;
+  children: [prompt, entry];
+}
+
+entry {
+  background-color: inherit;
+  padding: 12px 3px;
+}
+
+prompt {
+  background-color: inherit;
+  padding: 12px;
+}
+
+listview {
+  lines: 8;
+}
+
+element {
+  children: [element-icon, element-text];
+}
+
+element-icon {
+  padding: 10px 10px;
+}
+
+element-text {
+  padding: 10px 0;
+}
+
+element-text selected {
+  text-color: @fg-alt;
+  // background-color: #88c0d0;
+}

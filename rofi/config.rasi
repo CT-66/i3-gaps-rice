@@ -1,0 +1,45 @@
+// vim: filetype=scss
+
+@theme "themes/nord.rasi"
+
+configuration {
+    // font: "CaskaydiaCove Nerd Font 12";
+    font: "JetBrains Mono Nerd Font 12";
+    show-icons: true;
+    terminal: "st";
+    case-sensitive: false;
+    matching: "fuzzy";
+
+    drun {
+    display-name: "";
+    }
+
+    run {
+    display-name: "";
+    }
+
+    window {
+    display-name: "";
+    }
+
+	modi: "drun,run,window,emoji";
+
+    kb-row-up: "Up,Control+k,Control+p,Shift+Tab,Shift+ISO_Left_Tab";
+    kb-row-down: "Down,Control+j,Control+n";
+    kb-accept-entry: "Control+m,Return,KP_Enter";
+    terminal: "st";
+    kb-remove-to-eol: "Control+Shift+e";
+    kb-remove-char-back: "BackSpace";
+    kb-move-char-back: "Left,Control+b,Control+h";
+    kb-move-char-forward: "Right,Control+f,Control+l";
+    kb-mode-complete: "Control+alt+l";
+    kb-move-word-back: "Alt+b,Control+Left";
+    kb-move-word-forward: "Alt+f,Control+Right";
+    kb-clear-line: "Control+w";
+    kb-move-front: "Control+a";
+    kb-move-end: "Control+e";
+    kb-row-first: "Home,Ctrl+g";
+    kb-row-last: "End,Ctrl+Shift+g";
+    kb-cancel: "Escape";
+
+}
