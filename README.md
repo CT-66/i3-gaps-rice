@@ -12,5 +12,5 @@ Just another i3-gaps rice
 -   **Compositor:** picom-ibhagwan-git
 -   **Bar:** Polybar +
 -   **Music Visualizer:** cava +
--   **Colorscheme:** You can check the xresources file in the github repo +
+-   **Colorscheme:** Check the xresources file
 -   **Wallpaper:** [Link](https://raw.githubusercontent.com/CT-66/wallpapers/master/092.png)
