@@ -1,7 +1,6 @@
 # vim: filetype=config
 set $mod Mod4
 
-# font pango:Caskaydia Cove Nerd Font 10
 font pango:JetBrainsMono Nerd Font 10
 
 # use Mouse+$mod to drag floating windows to their wanted position
@@ -112,7 +111,7 @@ bindsym $mod+shift+x move container to workspace next
 bindsym $mod+shift+z move container to workspace prev
 
 # alt-tab functionality but with workspaces
-# bindsym Mod1+Tab workspace back_and_forth
+bindsym Mod1+Tab workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -153,13 +152,9 @@ bindsym $mod+Ctrl+r restart
  # ==================
 
 # gaps
-# for_window [class=".*"] border pixel 0
 for_window [class=".*"] border pixel 2
-# for_window [class=".*"] border pixel 1
 gaps inner 15
 gaps outer 15
-
-# smart_gaps inverse_outer
 
 # increase gaps
 bindsym $mod+p gaps inner current plus 5; gaps outer current plus 5
@@ -171,14 +166,11 @@ bindsym $mod+shift+p gaps inner current minus 5; gaps outer current minus 5
 
 # colors
 # class                 border  backgr. text    indicator child_border
-# client.focused          #eceff4 #eceff4 #eceff4 #eceff4
 client.focused          #61AFEF #61AFEF #61AFEF #61AFEF
 client.unfocused        #2e3440 #2e3440 #2e3440 #2e3440
 client.focused_inactive #3b4252 #3b4252 #3b4252 #3b4252
 client.placeholder      #d8dee9 #d8dee9 #d8dee9 #d8dee9
 client.urgent           #bf616a #bf616a #bf616a #bf616a
-
-# client.focused          #e1acff #e1acff #e1acff #e1acff
 
 # =======================
 

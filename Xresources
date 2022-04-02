@@ -1,3 +1,5 @@
+! vim: commentstring=!%s
+
 *.foreground:   #c8ccd4
 *.background:   #1e222a
 
@@ -17,3 +19,21 @@
 *.color13:      #c678dd
 *.color14:      #56b6c2
 *.color15:      #c8ccd4
+
+! ===================
+
+*.cursorColor: #528bff
+*fading: 35
+*fadeColor: #4C566A
+*.highlightColor:#4c566a
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.autohint: 0
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+! st settings
+st.alpha: 0.85
+st.borderpx: 10
+st.font: JetBrainsMono Nerd Font:pixelsize=15:antialias=true:autohint=true
